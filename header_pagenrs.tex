@@ -1,8 +1,31 @@
 \setbeamertemplate{navigation symbols}{}
-\institute{Institution Name\\ first.last.name@institution.com}
-%\setbeamertemplate{footline}[frame number]
+\institute[Short Institution]{Institution Name\\ first.last.name@institution.com}
+
+\setbeamerfont{author in head/foot}{size=\footnotesize}
+\setbeamerfont{title in head/foot}{size=\footnotesize}
+\setbeamerfont{date in head/foot}{size=\footnotesize}
+
+% Setup the footline of each slide.
+% This requires R code output to have out.height="85%", so that the graphs won't be truncated by the footnote of each slide.
+% Code source: https://tex.stackexchange.com/questions/51665/appearance-of-the-name-of-the-author-in-beamer
 \setbeamertemplate{footline}{%
-   \raisebox{10pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\scriptsize\insertframenumber}}}\hspace*{20pt}}
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshortinstitute
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=3.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\today\hspace*{2em}
+    \insertframenumber{} \hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%\setbeamertemplate{footline}[frame number]
+   %\raisebox{10pt}{\makebox[\paperwidth]{\hfill\makebox[20pt]{\scriptsize\insertframenumber}}}\hspace*{20pt}}
 
 % Set all figures un-numbered
 \usepackage{caption}

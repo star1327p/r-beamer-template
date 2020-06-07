@@ -1,7 +1,7 @@
 ---
 title: "R Markdown and Beamer Template"
 author: "Firstname Lastname"
-date: \today
+date: "Conference"
 output: 
     beamer_presentation:
         theme: Madrid
@@ -12,7 +12,10 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, out.height="85%")
+# R code output should take up 85% of available height, 
+# so that the graphs won't be truncated by the footnote of each slide.
+
 options(tinytex.verbose = TRUE)
 
 library(ggplot2) # main library for data visualization
