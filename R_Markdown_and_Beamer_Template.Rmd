@@ -188,7 +188,8 @@ ggplot(data = cars, aes(x = speed, y = dist)) +
 knitr::include_graphics("LDA_plate_revised.png")
 ``` 
 
-\footnotesize C.P. Chai. Word Distinctivity -- Quantifying Improvement of Topic Modeling Results from N-Gramming. Accepted to REVSTAT Statistical Journal, 2020. 
+\footnotesize Chai, C. P. (2022). Word Distinctivity -- Quantifying improvement of topic modeling results from n-gramming. REVSTAT-Statistical Journal, 20(2):199-220.
+
 
 # Closing
 
